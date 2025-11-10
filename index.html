@@ -33,14 +33,14 @@
                         <div class="cta-buttons">
                             <a href="#projects" class="btn btn-primary">View Projects</a>
                             <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                            <button id="downloadResume" class="btn btn-primary">Download Resume</button>
                         </div>
                     </div>
                     <div class="hero-image">
                         <div class="profile-img-container">
-                            <img src="https://i.ibb.co/LDgH01HX/AKSHITPHOTO-cropped.jpg" 
-                                 alt="Akshit Verma" 
-                                 class="profile-img"
-                                 onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;color:var(--accent);font-size:4rem;font-weight:bold;\'>AV</div>'">
+                       <img id="profileImg" src="https://i.ibb.co/LDgH01HX/AKSHITPHOTO-cropped.jpg" 
+                           alt="Akshit Verma" 
+                           class="profile-img">
                         </div>
                     </div>
                 </div>
@@ -61,18 +61,18 @@
                             With experience in Java, Python, Django, React, and database management, I've solved 
                             over 200 DSA problems on platforms like LeetCode, CodeChef, and GeeksforGeeks.
                         </p>
-                        <div style="margin-top: 2rem;">
+                        <div class="info-block" style="margin-top: 2rem;">
                             <div class="info-item">
                                 <strong>Location:</strong>
                                 <span style="color: var(--text-secondary)">Bengaluru, Karnataka</span>
                             </div>
                             <div class="info-item">
                                 <strong>Email:</strong>
-                                <span style="color: var(--text-secondary)">vermaakshit@outlook.com</span>
+                                <span class="muted">vermaakshit@outlook.com</span>
                             </div>
                             <div class="info-item">
                                 <strong>Phone:</strong>
-                                <span style="color: var(--text-secondary)">9036909457</span>
+                                <span class="muted">9036909457</span>
                             </div>
                         </div>
                     </div>
@@ -183,6 +183,19 @@
                             <li>Completed coursework in Physics, Chemistry, Mathematics and Computer Science</li>
                         </ul>
                     </div>
+
+                    <div class="education-card">
+                        <div class="education-header">
+                            <div>
+                                <h3>Secondary Education (ICSE)</h3>
+                                <p class="institution">Baldwin Boys High School - Bengaluru</p>
+                            </div>
+                            <p class="duration">May 2020</p>
+                        </div>
+                        <ul>
+                            <li>Completed coursework in Computer Science, English, Mathematics, Science, History & Civics, Geography</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -196,29 +209,29 @@
                         or just want to say hi, feel free to reach out!
                     </p>
                     
-                    <form id="contactForm" style="max-width: 500px; margin: 2rem auto; text-align: left;">
-                        <div style="margin-bottom: 1.5rem;">
-                            <label for="name" style="display: block; color: var(--accent); margin-bottom: 0.5rem;">Name</label>
-                            <input type="text" id="name" required style="width: 100%; padding: 0.8rem; background: var(--bg-secondary); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 4px; color: var(--text-primary); font-size: 1rem;">
+                    <form id="contactForm">
+                        <div>
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="from_name" required>
                         </div>
                         
-                        <div style="margin-bottom: 1.5rem;">
-                            <label for="email" style="display: block; color: var(--accent); margin-bottom: 0.5rem;">Email</label>
-                            <input type="email" id="email" required style="width: 100%; padding: 0.8rem; background: var(--bg-secondary); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 4px; color: var(--text-primary); font-size: 1rem;">
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="from_email" required>
                         </div>
                         
-                        <div style="margin-bottom: 1.5rem;">
-                            <label for="message" style="display: block; color: var(--accent); margin-bottom: 0.5rem;">Message</label>
-                            <textarea id="message" required rows="5" style="width: 100%; padding: 0.8rem; background: var(--bg-secondary); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 4px; color: var(--text-primary); font-size: 1rem; resize: vertical;"></textarea>
+                        <div>
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required rows="5"></textarea>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
                     
-                    <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
-                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Or reach me directly at:</p>
-                        <p style="color: var(--accent); font-size: 1.1rem; margin-bottom: 0.5rem;">vermaakshit@outlook.com</p>
-                        <p style="color: var(--accent); font-size: 1.1rem;">+91 9036909457</p>
+                    <div class="contact-direct">
+                        <p class="muted" style="margin-bottom: 1rem;">Or reach me directly at:</p>
+                        <p class="accented" style="font-size: 1.1rem; margin-bottom: 0.5rem;">vermaakshit@outlook.com</p>
+                        <p class="accented" style="font-size: 1.1rem;">+91 9036909457</p>
                     </div>
                     
                     <div class="social-links">
@@ -235,6 +248,8 @@
         <p>&copy; 2025 Akshit Verma. Built with passion and code.</p>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

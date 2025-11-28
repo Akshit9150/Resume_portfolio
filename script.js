@@ -77,25 +77,25 @@ function initCertificateModal() {
             image: 'https://i.ibb.co/yFM4sn3j/Akshit-blackbucks-certificate.jpg',
             title: 'Full Stack Development with MERN',
             issuer: 'MERN Stack Certification',
-            date: '2024'
+            date: 'May 2025'
         },
         {
             image: 'https://i.ibb.co/SDRsjXNH/oracle-ecert.jpg',
             title: 'Oracle Cloud Infrastructure GENAI',
             issuer: 'Oracle Cloud',
-            date: '2024'
+            date: 'July 2025'
         },
         {
             image: 'https://i.ibb.co/VcLbrZff/Problem-Solvers-certification.jpg',
             title: 'Problem Solvers for DSA',
             issuer: 'Data Structures & Algorithms',
-            date: '2024'
+            date: 'June 2025'
         },
         {
             image: 'https://i.ibb.co/rKshkt8L/Neo-4j-certification.jpg',
             title: 'Neo4j Graph Database',
             issuer: 'Neo4j',
-            date: '2024'
+            date: 'July 2025'
         }
     ];
 

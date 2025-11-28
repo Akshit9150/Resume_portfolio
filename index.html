@@ -10,9 +10,15 @@
     <header>
         <nav>
             <a href="#" class="logo">AV</a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -33,14 +39,15 @@
                         <div class="cta-buttons">
                             <a href="#projects" class="btn btn-primary">View Projects</a>
                             <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                            <button id="downloadResume" class="btn btn-primary">Download Resume</button>
+                            <button id="downloadResume" class="btn btn-outline">Download Resume</button>
                         </div>
                     </div>
                     <div class="hero-image">
                         <div class="profile-img-container">
-                       <img id="profileImg" src="https://i.ibb.co/LDgH01HX/AKSHITPHOTO-cropped.jpg" 
-                           alt="Akshit Verma" 
-                           class="profile-img">
+                            <img src="https://i.ibb.co/LDgH01HX/AKSHITPHOTO-cropped.jpg" 
+                                 alt="Akshit Verma" 
+                                 class="profile-img"
+                                 id="profileImg">
                         </div>
                     </div>
                 </div>
@@ -61,18 +68,18 @@
                             With experience in Java, Python, Django, React, and database management, I've solved 
                             over 200 DSA problems on platforms like LeetCode, CodeChef, and GeeksforGeeks.
                         </p>
-                        <div class="info-block" style="margin-top: 2rem;">
+                        <div class="info-details">
                             <div class="info-item">
                                 <strong>Location:</strong>
-                                <span style="color: var(--text-secondary)">Bengaluru, Karnataka</span>
+                                <span class="text-secondary">Bengaluru, Karnataka</span>
                             </div>
                             <div class="info-item">
                                 <strong>Email:</strong>
-                                <span class="muted">vermaakshit@outlook.com</span>
+                                <span class="text-secondary">vermaakshit@outlook.com</span>
                             </div>
                             <div class="info-item">
                                 <strong>Phone:</strong>
-                                <span class="muted">9036909457</span>
+                                <span class="text-secondary">9036909457</span>
                             </div>
                         </div>
                     </div>
@@ -83,16 +90,16 @@
                                 <p>Java, Python, JavaScript, HTML, CSS</p>
                             </div>
                             <div class="skill-category">
-                                <h3>Frameworks</h3>
-                                <p>React, Node.js, Django, TensorFlow, Scikit-learn</p>
+                                <h3>Frameworks &amp; Tools</h3>
+                                <p>React, Node.js, Express.js, Django, MongoDB, N8N</p>
                             </div>
                             <div class="skill-category">
-                                <h3>Tools</h3>
-                                <p>Git, MongoDB, Supabase, VS Code, Figma, Vercel</p>
+                                <h3>Developer Tools</h3>
+                                <p>Git, GitHub, VS Code, IntelliJ IDEA</p>
                             </div>
                             <div class="skill-category">
-                                <h3>Certifications</h3>
-                                <p>AWS Cloud, MERN Stack, Oracle Cloud GENAI</p>
+                                <h3>Concepts</h3>
+                                <p>SDLC, Agile Methodology, Problem Solving</p>
                             </div>
                         </div>
                     </div>
@@ -104,6 +111,36 @@
             <div class="container">
                 <h2 class="section-title">Projects</h2>
                 <div class="projects-grid">
+                    <a href="https://github.com/Akshit9150/Smart_Energy_Grid" target="_blank" class="project-card">
+                        <div class="project-header">
+                            <div>
+                                <h3>Smart Energy Grid</h3>
+                                <p class="project-date">November 2025</p>
+                            </div>
+                        </div>
+                        <p class="project-tech">Python • NumPy • Neural Network</p>
+                        <ul>
+                            <li>Built energy forecasting system using ARIMA, MLP, and ANFIS on year-long grid data</li>
+                            <li>Optimized ANFIS, cutting MAPE by 9.64% (hourly) & 12.37% (day-ahead)</li>
+                            <li>Achieved 3.80% MAPE (MLP Day-Ahead) & 5.34% MAPE (ANFIS Hour-Ahead), meeting <5% industry standard</li>
+                        </ul>
+                    </a>
+
+                    <a href="https://github.com/Akshit9150/Knowledge-bases-Search-Engine" target="_blank" class="project-card">
+                        <div class="project-header">
+                            <div>
+                                <h3>Knowledge-Based Search Engine</h3>
+                                <p class="project-date">October 2025</p>
+                            </div>
+                        </div>
+                        <p class="project-tech">N8N • RAG • Google Drive Integration</p>
+                        <ul>
+                            <li>Engineered RAG system using N8N to process user queries and retrieve data from Google Drive</li>
+                            <li>Integrated chatbot interface that refines and augments retrieved information for precise responses</li>
+                            <li>Improved response relevance by 30% through RAG-based retrieval integrated into N8N workflows</li>
+                        </ul>
+                    </a>
+
                     <a href="https://github.com/Akshit9150/ai-timetable-system" target="_blank" class="project-card">
                         <div class="project-header">
                             <div>
@@ -151,6 +188,76 @@
                 </div>
             </div>
         </section>
+
+        <section id="certifications">
+            <div class="container">
+                <h2 class="section-title">Certifications</h2>
+                <div class="certifications-grid">
+                    <div class="cert-card" data-cert-index="0">
+                        <div class="cert-image-container">
+                            <img src="https://i.ibb.co/yFM4sn3j/Akshit-blackbucks-certificate.jpg" alt="MERN Stack Certificate">
+                            <div class="cert-overlay">
+                                <span>Click to View</span>
+                            </div>
+                        </div>
+                        <h3>Full Stack Development with MERN</h3>
+                        <p class="cert-issuer">MERN Stack Certification</p>
+                        <p class="cert-date">May 2025</p>
+                    </div>
+
+                    <div class="cert-card" data-cert-index="1">
+                        <div class="cert-image-container">
+                            <img src="https://i.ibb.co/SDRsjXNH/oracle-ecert.jpg" alt="Oracle Cloud GENAI Certificate">
+                            <div class="cert-overlay">
+                                <span>Click to View</span>
+                            </div>
+                        </div>
+                        <h3>Oracle Cloud Infrastructure GENAI</h3>
+                        <p class="cert-issuer">Oracle Cloud</p>
+                        <p class="cert-date">July 2025</p>
+                    </div>
+
+                    <div class="cert-card" data-cert-index="2">
+                        <div class="cert-image-container">
+                            <img src="https://i.ibb.co/VcLbrZff/Problem-Solvers-certification.jpg" alt="DSA Certificate">
+                            <div class="cert-overlay">
+                                <span>Click to View</span>
+                            </div>
+                        </div>
+                        <h3>Problem Solvers for DSA</h3>
+                        <p class="cert-issuer">Data Structures & Algorithms</p>
+                        <p class="cert-date">June 2025</p>
+                    </div>
+
+                    <div class="cert-card" data-cert-index="3">
+                        <div class="cert-image-container">
+                            <img src="https://i.ibb.co/rKshkt8L/Neo-4j-certification.jpg" alt="Neo4j Certificate">
+                            <div class="cert-overlay">
+                                <span>Click to View</span>
+                            </div>
+                        </div>
+                        <h3>Neo4j Graph Database</h3>
+                        <p class="cert-issuer">Neo4j</p>
+                        <p class="cert-date">July 2025</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificate Modal -->
+        <div class="cert-modal" id="certModal">
+            <div class="cert-modal-content">
+                <button class="cert-modal-close" id="closeModal">&times;</button>
+                <button class="cert-modal-nav cert-modal-prev" id="prevCert">‹</button>
+                <button class="cert-modal-nav cert-modal-next" id="nextCert">›</button>
+                <img src="" alt="Certificate" class="cert-modal-image" id="modalImage">
+                <div class="cert-modal-info">
+                    <h3 id="modalTitle"></h3>
+                    <p id="modalIssuer"></p>
+                    <p id="modalDate"></p>
+                </div>
+            </div>
+        </div>
 
         <section id="education">
             <div class="container">
@@ -210,28 +317,28 @@
                     </p>
                     
                     <form id="contactForm">
-                        <div>
+                        <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="from_name" required>
                         </div>
                         
-                        <div>
+                        <div class="form-group">
                             <label for="email">Email</label>
                             <input type="email" id="email" name="from_email" required>
                         </div>
                         
-                        <div>
+                        <div class="form-group">
                             <label for="message">Message</label>
                             <textarea id="message" name="message" required rows="5"></textarea>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
                     </form>
                     
                     <div class="contact-direct">
-                        <p class="muted" style="margin-bottom: 1rem;">Or reach me directly at:</p>
-                        <p class="accented" style="font-size: 1.1rem; margin-bottom: 0.5rem;">vermaakshit@outlook.com</p>
-                        <p class="accented" style="font-size: 1.1rem;">+91 9036909457</p>
+                        <p class="text-secondary">Or reach me directly at:</p>
+                        <p class="contact-info">vermaakshit@outlook.com</p>
+                        <p class="contact-info">+91 9036909457</p>
                     </div>
                     
                     <div class="social-links">
@@ -248,7 +355,6 @@
         <p>&copy; 2025 Akshit Verma. Built with passion and code.</p>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="script.js"></script>
 </body>

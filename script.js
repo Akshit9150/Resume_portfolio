@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function initEmailJS() {
     if (!window.emailjs) return;
     try {
-        emailjs.init('LX90Nb7ZnkHzHWiDt');
+        emailjs.init('YOUR_PUBLIC_KEY'); // Replace with your EmailJS public key
     } catch (error) {
         console.warn('EmailJS init failed or not configured', error);
     }
@@ -96,6 +96,12 @@ function initCertificateModal() {
             title: 'Neo4j Graph Database',
             issuer: 'Neo4j',
             date: 'July 2025'
+        },
+        {
+            image: 'https://i.ibb.co/r2QzC713/Screenshot-2026-01-08-091826.png',
+            title: 'Future of Work Hackathon',
+            issuer: 'Hackathon',
+            date: 'July 2025'
         }
     ];
 
@@ -150,12 +156,187 @@ function initResumeDownload() {
     if (!downloadBtn) return;
 
     downloadBtn.addEventListener('click', () => {
-        const link = document.createElement('a');
-        link.href = 'AkshitVerma.pdf';
-        link.download = 'AkshitVerma.pdf';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+        if (!window.jspdf || !window.jspdf.jsPDF) {
+            console.warn('jsPDF not loaded');
+            return;
+        }
+
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+
+        // Set colors
+        const accentColor = [0, 255, 136];
+        const textColor = [0, 0, 0];
+
+        // Header
+        doc.setFontSize(24);
+        doc.setFont(undefined, 'bold');
+        doc.text('AKSHIT VERMA', 105, 20, { align: 'center' });
+
+        // Contact Info
+        doc.setFontSize(9);
+        doc.setFont(undefined, 'normal');
+        doc.text('Bengaluru, Karnataka | 9036909457 | vermaakshit@outlook.com', 105, 27, { align: 'center' });
+        doc.text('github.com/Akshit9150 | linkedin.com/in/akshitverma9150', 105, 32, { align: 'center' });
+
+        // Line
+        doc.setDrawColor(...accentColor);
+        doc.setLineWidth(0.5);
+        doc.line(20, 36, 190, 36);
+
+        let yPos = 44;
+
+        // SUMMARY
+        doc.setFontSize(12);
+        doc.setFont(undefined, 'bold');
+        doc.setTextColor(...accentColor);
+        doc.text('SUMMARY', 20, yPos);
+        yPos += 6;
+
+        doc.setFontSize(10);
+        doc.setFont(undefined, 'normal');
+        doc.setTextColor(...textColor);
+        const summary = '4th-year Computer Science student at VIT-AP University (Graduation: 2026) with experience designing and building scalable software applications and backend systems. Skilled in Java, Python, Django, React, and database management, with a focus on clean code and performance.';
+        const summaryLines = doc.splitTextToSize(summary, 170);
+        doc.text(summaryLines, 20, yPos);
+        yPos += summaryLines.length * 5 + 6;
+
+        // EDUCATION
+        doc.setFontSize(12);
+        doc.setFont(undefined, 'bold');
+        doc.setTextColor(...accentColor);
+        doc.text('EDUCATION', 20, yPos);
+        yPos += 6;
+
+        doc.setFontSize(11);
+        doc.setFont(undefined, 'bold');
+        doc.setTextColor(...textColor);
+        doc.text('Bachelor of Technology in Computer Science', 20, yPos);
+        doc.setFontSize(9);
+        doc.setFont(undefined, 'normal');
+        doc.text('June 2022 - June 2026', 190, yPos, { align: 'right' });
+        yPos += 5;
+
+        doc.setFontSize(10);
+        doc.setFont(undefined, 'italic');
+        doc.text('Vellore Institute of Technology - Andhra Pradesh', 20, yPos);
+        yPos += 5;
+
+        doc.setFont(undefined, 'normal');
+        doc.text('• Coursework in DBMS, OOP, Operating Systems, Data Structures', 20, yPos);
+        yPos += 5;
+        doc.text('• Solved 200+ DSA problems on LeetCode, CodeChef, and GeeksforGeeks', 20, yPos);
+        yPos += 5;
+        doc.text('• Active participant in hackathons and technical workshops', 20, yPos);
+        yPos += 8;
+
+        doc.setFontSize(11);
+        doc.setFont(undefined, 'bold');
+        doc.text('Senior Secondary Education (CBSE)', 20, yPos);
+        doc.setFontSize(9);
+        doc.setFont(undefined, 'normal');
+        doc.text('May 2020 - May 2022', 190, yPos, { align: 'right' });
+        yPos += 5;
+
+        doc.setFontSize(10);
+        doc.setFont(undefined, 'italic');
+        doc.text('Delhi Public School - Bengaluru', 20, yPos);
+        yPos += 5;
+
+        doc.setFont(undefined, 'normal');
+        doc.text('• Completed coursework in Physics, Chemistry, Mathematics and Computer Science', 20, yPos);
+        yPos += 10;
+
+        // PROJECTS
+        doc.setFontSize(12);
+        doc.setFont(undefined, 'bold');
+        doc.setTextColor(...accentColor);
+        doc.text('PROJECTS', 20, yPos);
+        yPos += 6;
+
+        // Project 1
+        doc.setFontSize(11);
+        doc.setFont(undefined, 'bold');
+        doc.setTextColor(...textColor);
+        doc.text('AI Timetable Generator', 20, yPos);
+        doc.setFontSize(9);
+        doc.setFont(undefined, 'normal');
+        doc.text('July 2025', 190, yPos, { align: 'right' });
+        yPos += 5;
+
+        doc.setFontSize(10);
+        doc.setFont(undefined, 'italic');
+        doc.text('React • Node.js • Gemini API', 20, yPos);
+        yPos += 5;
+
+        doc.setFont(undefined, 'normal');
+        doc.text('• Developed AI-driven timetable generator with seamless Gemini API integration', 20, yPos);
+        yPos += 5;
+        doc.text('• Implemented AI chatbot for dynamic schedule adjustments considering constraints', 20, yPos);
+        yPos += 5;
+        doc.text('• Delivered conflict-free scheduling solution boosting institutional efficiency', 20, yPos);
+        yPos += 8;
+
+        // Project 2
+        doc.setFontSize(11);
+        doc.setFont(undefined, 'bold');
+        doc.text('Sudoku Solver', 20, yPos);
+        doc.setFontSize(9);
+        doc.setFont(undefined, 'normal');
+        doc.text('June 2025', 190, yPos, { align: 'right' });
+        yPos += 5;
+
+        doc.setFontSize(10);
+        doc.setFont(undefined, 'italic');
+        doc.text('Java • JavaFX', 20, yPos);
+        yPos += 5;
+
+        doc.setFont(undefined, 'normal');
+        doc.text('• Created interactive Sudoku solver with engaging graphical interface', 20, yPos);
+        yPos += 5;
+
+        // Project 3
+        doc.setFontSize(11);
+        doc.setFont(undefined, 'bold');
+        doc.text('To-Do App', 20, yPos);
+        doc.setFontSize(9);
+        doc.setFont(undefined, 'normal');
+        doc.text('May 2025', 190, yPos, { align: 'right' });
+        yPos += 5;
+
+        doc.setFontSize(10);
+        doc.setFont(undefined, 'italic');
+        doc.text('Django • HTML • CSS', 20, yPos);
+        yPos += 5;
+
+        doc.setFont(undefined, 'normal');
+        doc.text('• Built full-stack web application with user authentication and session management', 20, yPos);
+        yPos += 5;
+        doc.text('• Implemented CRUD functionality with clean, responsive interface', 20, yPos);
+        yPos += 5;
+        doc.text('• Enabled secure, personalized task tracking with database integration', 20, yPos);
+        yPos += 10;
+
+        // ADDITIONAL INFORMATION
+        doc.setFontSize(12);
+        doc.setFont(undefined, 'bold');
+        doc.setTextColor(...accentColor);
+        doc.text('ADDITIONAL INFORMATION', 20, yPos);
+        yPos += 6;
+
+        doc.setFontSize(10);
+        doc.setFont(undefined, 'normal');
+        doc.setTextColor(...textColor);
+        doc.text('Languages: Java, Python, JavaScript, HTML, CSS', 20, yPos);
+        yPos += 5;
+        doc.text('Frameworks: React, Node.js, Django, TensorFlow, Scikit-learn', 20, yPos);
+        yPos += 5;
+        doc.text('Tools: Git, MongoDB, Supabase, VS Code, Figma, Vercel', 20, yPos);
+        yPos += 5;
+        doc.text('Certifications: AWS Cloud, MERN Stack, Oracle Cloud GENAI', 20, yPos);
+
+        // Save the PDF
+        doc.save('AkshitVerma_Resume.pdf');
     });
 }
 

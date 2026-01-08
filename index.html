@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akshit Verma | Developer</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2300ff88;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%2300cc6a;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='20' fill='%230a0a0a'/%3E%3Ctext x='50' y='70' font-family='Arial, sans-serif' font-size='60' font-weight='bold' fill='url(%23grad)' text-anchor='middle'%3EAV%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -39,15 +40,14 @@
                         <div class="cta-buttons">
                             <a href="#projects" class="btn btn-primary">View Projects</a>
                             <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                            <button id="downloadResume" class="btn btn-outline">Download Resume</button>
+                            <button id="downloadResume" class="btn btn-primary" style="background: transparent; border: 2px solid var(--accent); color: var(--accent);">Download Resume</button>
                         </div>
                     </div>
                     <div class="hero-image">
                         <div class="profile-img-container">
-                            <img src="https://i.ibb.co/LDgH01HX/AKSHITPHOTO-cropped.jpg" 
+                            <img id="profileImg" src="https://i.ibb.co/LDgH01HX/AKSHITPHOTO-cropped.jpg" 
                                  alt="Akshit Verma" 
-                                 class="profile-img"
-                                 id="profileImg">
+                                 class="profile-img">
                         </div>
                     </div>
                 </div>
@@ -68,18 +68,18 @@
                             With experience in Java, Python, Django, React, and database management, I've solved 
                             over 200 DSA problems on platforms like LeetCode, CodeChef, and GeeksforGeeks.
                         </p>
-                        <div class="info-details">
+                        <div style="margin-top: 2rem;">
                             <div class="info-item">
                                 <strong>Location:</strong>
-                                <span class="text-secondary">Bengaluru, Karnataka</span>
+                                <span style="color: var(--text-secondary)">Bengaluru, Karnataka</span>
                             </div>
                             <div class="info-item">
                                 <strong>Email:</strong>
-                                <span class="text-secondary">vermaakshit@outlook.com</span>
+                                <span style="color: var(--text-secondary)">vermaakshit@outlook.com</span>
                             </div>
                             <div class="info-item">
                                 <strong>Phone:</strong>
-                                <span class="text-secondary">9036909457</span>
+                                <span style="color: var(--text-secondary)">9036909457</span>
                             </div>
                         </div>
                     </div>
@@ -90,16 +90,16 @@
                                 <p>Java, Python, JavaScript, HTML, CSS</p>
                             </div>
                             <div class="skill-category">
-                                <h3>Frameworks &amp; Tools</h3>
-                                <p>React, Node.js, Express.js, Django, MongoDB, N8N</p>
+                                <h3>Frameworks</h3>
+                                <p>React, Node.js, Django, TensorFlow, Scikit-learn</p>
                             </div>
                             <div class="skill-category">
-                                <h3>Developer Tools</h3>
-                                <p>Git, GitHub, VS Code, IntelliJ IDEA</p>
+                                <h3>Tools</h3>
+                                <p>Git, MongoDB, Supabase, VS Code, Figma, Vercel</p>
                             </div>
                             <div class="skill-category">
-                                <h3>Concepts</h3>
-                                <p>SDLC, Agile Methodology, Problem Solving</p>
+                                <h3>Certifications</h3>
+                                <p>AWS Cloud, MERN Stack, Oracle Cloud GENAI</p>
                             </div>
                         </div>
                     </div>
@@ -111,6 +111,36 @@
             <div class="container">
                 <h2 class="section-title">Projects</h2>
                 <div class="projects-grid">
+                    <a href="https://github.com/Akshit9150/Interest_Calculator_AWS" target="_blank" class="project-card">
+                        <div class="project-header">
+                            <div>
+                                <h3>Interest Calculator using AWS</h3>
+                                <p class="project-date">January 2026</p>
+                            </div>
+                        </div>
+                        <p class="project-tech">AWS Lambda • DynamoDB • API Gateway</p>
+                        <ul>
+                            <li>Built serverless Interest Calculator using AWS Lambda, API Gateway, and DynamoDB with millisecond-level execution</li>
+                            <li>Integrated Gemini API to generate AI-powered financial explanations, increasing user understanding</li>
+                            <li>Implemented persistent history storage, logging, and monitoring through DynamoDB, S3, and CloudWatch</li>
+                        </ul>
+                    </a>
+
+                    <a href="https://github.com/Akshit9150/Pomotodo_APP" target="_blank" class="project-card">
+                        <div class="project-header">
+                            <div>
+                                <h3>Pomotodo</h3>
+                                <p class="project-date">December 2025</p>
+                            </div>
+                        </div>
+                        <p class="project-tech">Firebase • React • User Authentication</p>
+                        <ul>
+                            <li>Developed Pomodoro productivity web app using React, Vite, and TypeScript for 25-50 min focus cycles</li>
+                            <li>Integrated Firebase Auth + Firestore for secure real-time data sync, task tracking, and session history</li>
+                            <li>Designed streak system and 180-day contribution heatmap to boost user engagement and productivity insights</li>
+                        </ul>
+                    </a>
+
                     <a href="https://github.com/Akshit9150/Smart_Energy_Grid" target="_blank" class="project-card">
                         <div class="project-header">
                             <div>
@@ -240,6 +270,18 @@
                         <p class="cert-issuer">Neo4j</p>
                         <p class="cert-date">July 2025</p>
                     </div>
+
+                    <div class="cert-card" data-cert-index="4">
+                        <div class="cert-image-container">
+                            <img src="https://i.ibb.co/r2QzC713/Screenshot-2026-01-08-091826.png" alt="Future of Work Hackathon Certificate">
+                            <div class="cert-overlay">
+                                <span>Click to View</span>
+                            </div>
+                        </div>
+                        <h3>Future of Work Hackathon</h3>
+                        <p class="cert-issuer">Hackathon</p>
+                        <p class="cert-date">July 2025</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -317,28 +359,28 @@
                     </p>
                     
                     <form id="contactForm">
-                        <div class="form-group">
+                        <div>
                             <label for="name">Name</label>
                             <input type="text" id="name" name="from_name" required>
                         </div>
                         
-                        <div class="form-group">
+                        <div>
                             <label for="email">Email</label>
                             <input type="email" id="email" name="from_email" required>
                         </div>
                         
-                        <div class="form-group">
+                        <div>
                             <label for="message">Message</label>
                             <textarea id="message" name="message" required rows="5"></textarea>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
                     </form>
                     
-                    <div class="contact-direct">
-                        <p class="text-secondary">Or reach me directly at:</p>
-                        <p class="contact-info">vermaakshit@outlook.com</p>
-                        <p class="contact-info">+91 9036909457</p>
+                    <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Or reach me directly at:</p>
+                        <p style="color: var(--accent); font-size: 1.1rem; margin-bottom: 0.5rem;">vermaakshit@outlook.com</p>
+                        <p style="color: var(--accent); font-size: 1.1rem;">+91 9036909457</p>
                     </div>
                     
                     <div class="social-links">
@@ -355,7 +397,11 @@
         <p>&copy; 2025 Akshit Verma. Built with passion and code.</p>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="script.js"></script>
+
+
+
 </body>
 </html>
